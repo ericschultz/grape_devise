@@ -2,7 +2,8 @@ require 'devise'
 
 module GrapeDevise::API
   extend ActiveSupport::Concern
-
+  include Devise::Controllers::SignInOut
+  
   def self.define_helpers mapping
     mapping = mapping.name.to_s
 
